@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gran Premiación 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FUENTE -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style/series.css">
+</head>
+
+<body>
+
+  <!-- FONDO ANIMADO -->
+  <div class="stars"></div>
+
+  <!-- HEADER -->
+  <header>
+    <h1>🏆 Mejor serie</h1>
+    <p>Dorama , Anime & Series del Año</p>
+      <button class="back-btn" onclick="window.history.back()">⬅ Volver</button>
+
+  </header>
+
+  <!-- PODIO -->
+  <section class="podium-container">
+    <div class="podium second">
+      <div class="place">🥈</div>
+      <div class="name">—</div>
+      <div class="score">0 pts</div>
+    </div>
+
+    <div class="podium first">
+      <div class="place">🥇</div>
+      <div class="name">—</div>
+      <div class="score">0 pts</div>
+    </div>
+
+    <div class="podium third">
+      <div class="place">🥉</div>
+      <div class="name">—</div>
+      <div class="score">0 pts</div>
+    </div>
+
+    <div class="podium fourth">
+      <div class="place">4️⃣</div>
+      <div class="name">—</div>
+      <div class="score">0 pts</div>
+    </div>
+
+    <div class="podium fifth">
+      <div class="place">5️⃣</div>
+      <div class="name">—</div>
+      <div class="score">0 pts</div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="form-section">
+    <h2>➕ Agregar Candidato</h2>
+
+    <form id="serieForm">
+
+      <!-- NOMBRE -->
+      <input
+        type="text"
+        id="name"
+        placeholder="Nombre de la película o serie"
+        required
+      >
+
+      <!-- TIPO -->
+      <select id="type">
+        <option value="Película">⛩️ Anime</option>
+        <option value="Serie">📺 Serie</option>
+        <option value="Serie">🇰🇷🍚 Dorama</option>
+      </select>
+
+     <!-- Input oculto -->
+<input type="file" id="imageInput" accept="image/*" style="display: none;">
+
+<!-- Botón estilizado -->
+<button type="button" id="uploadBtn">📤 Subir Imagen</button>
+<span id="fileName">Ninguna imagen seleccionada</span>
+
+
+      <!-- BOTÓN -->
+      <button type="submit">Agregar</button>
+
+    </form>
+  </section>
+    <button class="update-btn" type="button" onclick="updatePodium()">
+      Actualizar Premiación 🏆
+    </button>
+  <!-- LISTA DE CANDIDATOS -->
+  <section class="list-section">
+    <h2>📊 Candidatos</h2>
+
+    <div id="serieList" class="grid"></div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+  </footer>
+
+  <!-- JS (AL FINAL) -->
+  <script src="../js/series.js"></script>
+
+</body>
+</html>

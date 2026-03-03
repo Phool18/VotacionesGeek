@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenida a la Gran Premiación 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FUENTE -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style/bienvenida.css">
+</head>
+<body>
+  <!-- ESTRELLAS DE FONDO -->
+  <div class="stars"></div>
+
+  <!-- BIENVENIDA -->
+  <section class="bienvenida-container">
+    <h1>🎬 Ruleta de ocio</h1>
+    <p class="agradecimiento">Aquí podrás realizar la elección y puntuación de series, películas y música a tu gusto.</p>
+
+    <!-- CONTADORES -->
+    <div class="counters">
+      <div class="counter-box">
+      <h2 class="counter" data-target="51">0</h2> 
+        <p>Horas de Peliculas vistas</p>
+      </div>
+      <div class="counter-box">
+        <h2 class="counter" data-target="143">0</h2>
+        <p>Horas de Series Vistas</p>
+      </div>
+      <div class="counter-box">
+        <h2 class="counter" data-target="152">0</h2>
+        <p>Canciones Escuchadas</p>
+      </div>
+    </div>
+
+
+    <!-- BOTONES DE NAVEGACIÓN -->
+    <div class="navigation-buttons">
+      <button onclick="location.href='views/Peliculas.html'">🎬 Películas</button>
+      <button onclick="location.href='views/serie.html'">📺 Series</button>
+      <button onclick="location.href='views/spotify.html'">🎵 Música</button>
+    </div>
+  </section>
+    <div class="Cursileria">
+    <p>¡Bienvenido a tu espacio de entretenimiento! Aquí podrás explorar <strong>Películas</strong>, <strong>Series</strong> y <strong>Música</strong> de manera sencilla y divertida.</p>
+
+    <p>Usa los botones para navegar entre las secciones. Además, puedes probar nuestra <strong>ruleta interactiva</strong> 🎯 para elegir qué película ver al azar, ¡perfecta para cuando no sabes por dónde empezar!</p>
+
+    <p>Sigue las instrucciones, disfruta del contenido y deja que cada momento frente a la pantalla o escuchando música se convierta en una experiencia única.</p>
+
+</div>
+
+  <!-- RULETA INTERACTIVA -->
+<div class="wheel-outer-container">
+  <div class="wheel-wrapper">
+    <div class="pointer"></div>
+    <div id="wheel" class="wheel"></div>
+  </div>
+
+<div class="controls">
+    <input type="text" id="newOption" placeholder="Escribe un premio...">
+    <input type="number" id="deleteCount" placeholder="¿Cuántos eliminar?" min="1">
+    
+    <div class="button-group">
+      <button id="addOption" class="btn-add">Agregar</button>
+      <button id="spinButton" class="btn-spin">¡Girar Ruleta! 🎯</button>
+    </div>
+</div>
+
+  <p id="winner"></p>
+
+<div id="prize-image-container" class="prize-container hidden">
+  <img id="prize-image" src="img/Cine.jpg" alt="Imagen del premio">
+</div>
+
+</div> 
+<audio id="winSound" src="audio/Victori.mp3" preload="auto"></audio>
+<audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3" preload="auto"></audio>
+  <!-- JS -->
+  <script src="js/bienvenida.js"></script>
+</body>
+</html>

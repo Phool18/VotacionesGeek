@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Spotify Awards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FUENTE -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style/spotify.css">
+</head>
+
+<body>
+
+  <!-- FONDO ANIMADO -->
+  <div class="stars"></div>
+
+  <!-- HEADER -->
+  <header>
+    <h1>🎧 Mejor cancion</h1>
+    <p>El ranking musical </p>
+    <button class="back-btn" onclick="window.history.back()">⬅ Volver</button>
+  </header>
+
+  <!-- PODIO -->
+  <section class="podium-container" aria-label="Podio del ranking"></section>
+
+  <!-- FORMULARIO -->
+  <section class="form-section" aria-label="Agregar canción">
+    <h2>➕ Agregar Canción</h2>
+    <form id="spotifyForm" autocomplete="off">
+
+      <!-- LINK SPOTIFY -->
+      <input type="text" id="spotifyLink" placeholder="Pega el link de Spotify" required>
+
+      <!-- PREVIEW -->
+      <div id="preview"></div>
+
+      <!-- TÍTULO -->
+      <input type="text" id="title" placeholder="Canción" required>
+
+      <!-- BOTÓN -->
+      <button type="submit">Agregar al Top</button>
+    </form>
+  </section>
+
+  <!-- ACCIÓN -->
+  <section class="actions">
+    <button id="updateRankingBtn">🔄 Actualizar Ranking</button>
+  </section>
+
+  <!-- LISTA / RANKING -->
+  <section class="list-section" aria-label="Ranking completo">
+    <h2>📊 Ranking Spotify</h2>
+    <div id="topList" class="grid"></div>
+  </section>
+
+  <!-- JS -->
+  <script src="../js/spotify.js"></script>
+
+</body>
+</html>
